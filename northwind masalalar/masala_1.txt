@@ -1,0 +1,6 @@
+SELECT products.product_id, products.product_name, suppliers.company_name
+FROM orders
+JOIN order_details ON orders.order_id = order_details.order_id
+JOIN products ON order_details.product_id = products.product_id
+JOIN suppliers ON suppliers.supplier_id = products.supplier_id
+WHERE order_date BETWEEN '1996-07-01' AND '1996-07-31';

@@ -1,0 +1,5 @@
+select order_date,quantity from order_details
+join orders on  order_details.order_id=orders.order_id
+where order_date BETWEEN '1997-05-01' and '1997-06-01'
+ORDER BY quantity desc
+limit 5;

@@ -1,0 +1,11 @@
+SELECT EXTRACT(YEAR FROM orders.order_date) AS "year",
+       products.product_name AS "product_name",
+       suppliers.company_name AS "supplier_company",
+       COUNT(order_details.order_id) AS "number_of_orders"
+FROM orders
+JOIN order_details ON orders.order_id = order_details.order_id
+JOIN products ON order_details.product_id = products.product_id
+JOIN suppliers ON products.supplier_id = suppliers.supplier_id
+GROUP BY EXTRACT(YEAR FROM orders.order_date), products.product_name, suppliers.company_name
+ORDER BY COUNT(order_details.order_id) DESC
+LIMIT 1;

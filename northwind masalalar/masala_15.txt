@@ -1,0 +1,5 @@
+SELECT product_name,quantity,quantity_per_unit FROM order_details
+join orders on orders.order_id =order_details.order_id
+join products on products.product_id=order_details.product_id
+ORDER BY quantity
+limit 10;

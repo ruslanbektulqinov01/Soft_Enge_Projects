@@ -1,0 +1,4 @@
+SELECT city
+FROM Employees
+WHERE city IN (SELECT city FROM Customers)
+GROUP BY city;
