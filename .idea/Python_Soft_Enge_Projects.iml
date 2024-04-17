@@ -7,7 +7,7 @@
       <excludeFolder url="file://$MODULE_DIR$/all_django_projects/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/all_django_projects/news_site/.idea/dataSources" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.10 (Soft_Enge_Projects)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.10" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
